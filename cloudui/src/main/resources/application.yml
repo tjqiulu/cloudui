@@ -1,0 +1,28 @@
+#image file
+file: 
+  arrayProps: 
+    - id: 1
+      pw: "1234"
+    - id: 2
+      pw: "5678"
+    - id: 3
+      pw: "9087"
+  listProp: "257390146x8x.png,415279038x6x.png,561904287x3x.png"
+    
+#server      
+server:
+  port: 8802
+  tomcat:
+    max-connections: 100
+    accept-count: 50
+    max-threads: 1000
+#log
+logging:
+  file: ./logs/cloudUI.log
+  pattern:
+    console: "%d{yyMMdd-HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
+    file: "%d{yyMMdd-HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
+  level:
+    com:
+      gemalto: Info
+    org: warn
